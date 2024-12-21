@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Nuevo Cultivo</title>
+    <link rel="stylesheet" href="../css/StyleGeneral.css">
+</head>
+<body>
+    <header>
+        <div class="centrado">
+          <div class="site-branding">
+            <h1 class="titulo">Bitacora del cultivador</h1>
+          </div>
+        </div>
+        <div class="centrado-menu">
+          <section class="menu-section">
+            <nav class="menu-simple-menu">
+              <ul>
+                <li>
+                  <button><a href="../index.html">Inicio</a></button>
+                </li>
+                <li>
+                  <button>
+                    <a href="seguimientos.html">Seguimientos</a>
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <a href="guiaDeCultivo.html">Guia de cultivo</a>
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <a href="miReprocann.html">Mi Reprocann</a>
+                  </button>
+                </li>
+                <li>
+                  <button><a href="login.html">Login</a></button>
+                </li>
+                <li>
+                  <button><a href="contacto.html">Contacto</a></button>
+                </li>
+              </ul>
+            </nav>
+          </section>
+        </div>
+      </header>
+    <main class="centrado-simple">
+        <div class="tarjeta-simple">
+            <div class="tarjeta-content">
+                <form id="nuevo-cultivo-form" class="formulario">
+                    <div>
+                        <label for="nombre">Nombre del cultivo:</label>
+                        <input type="text" id="nombre" required>
+                    </div>
+                    <div>
+                        <label for="genetica">Genética:</label>
+                        <input type="text" id="genetica" required>
+                    </div>
+                    <div>
+                        <label for="fotoperiodo">Fotoperíodo:</label>
+                        <input type="text" id="fotoperiodo" required>
+                    </div>
+                    <div>
+                        <label for="fechaIni">Fecha de inicio:</label>
+                        <input type="date" id="fechaIni" required>
+                    </div>
+                    <div>
+                        <label for="fechaFlor">Fecha de floración:</label>
+                        <input type="date" id="fechaFlor" required>
+                    </div>
+                    <div>
+                      <label for="img">Url de la imagen:</label>
+                      <input type="url" id="img" required>
+                  </div>
+                    <div id="riegos-container">
+                        <h3>Riegos</h3>
+                    </div>
+                    <div class="menu-simple-menu">
+                        <button type="button" id="agregar-riego">Agregar Riego</button>
+                        <button type="submit">Guardar Cultivo</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script type="module" src="../js/agregar-cultivo.js"></script>
+</body>
+</html>
