@@ -3,9 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Carrito de compras</title>
+    <link rel="stylesheet" href="../css/StyleGeneral.css">
+
 </head>
-<body>
+<header>
+    <div class="centrado">
+      <div class="site-branding">
+        <h1 class="titulo">Bitacora del cultivador</h1>
+      </div>
+    </div>
+    <div class="centrado-menu">
+      <section class="menu-section">
+        <nav class="menu-simple-menu">
+          <ul>
+            <li>
+              <button><a href="../index.html">Inicio</a></button>
+            </li>
+            <li>
+              <button>
+                <a href="seguimientos.html">Seguimientos</a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="guiaDeCultivo.html">Guia de cultivo</a>
+              </button>
+            </li>
+            <li>
+              <button>
+                <a href="miReprocann.html">Mi Reprocann</a>
+              </button>
+            </li>
+            <li>
+              <button><a href="eComerce.html">E-comerce</a></button>
+            </li>
+            <li>
+              <button><a href="contacto.html">Contacto</a></button>
+            </li>
+          </ul>
+        </nav>
+      </section>
+    </div>
+  </header>
+
+  <body>
+    <h1>Tienda de Productos</h1>
+   
+    <div id="productos">
+        <div class="producto">
+            <span>Laptop - $800</span>
+            <span>Stock: <span id="stock-laptop">10</span></span>
+            <button onclick="agregarAlCarrito('Laptop', 800, 'laptop')">Agregar</button>
+        </div>
+        <div class="producto">
+            <span>Smartphone - $500</span>
+            <span>Stock: <span id="stock-smartphone">15</span></span>
+            <button onclick="agregarAlCarrito('Smartphone', 500, 'smartphone')">Agregar</button>
+        </div>
+        <div class="producto">
+            <span>Tablet - $300</span>
+            <span>Stock: <span id="stock-tablet">8</span></span>
+            <button onclick="agregarAlCarrito('Tablet', 300, 'tablet')">Agregar</button>
+        </div>
+    </div>
+
+    <div id="carrito">
+        <h2>Carrito de Compras</h2>
+        <ul id="lista-carrito"></ul>
+        <p>Subtotal: $<span id="subtotal-carrito">0</span></p>
+        <p>Descuento: $<span id="descuento-carrito">0</span></p>
+        <p>IVA (21%): $<span id="iva-carrito">0</span></p>
+        <p><strong>Total: $<span id="total-carrito">0</span></strong></p>
+        <button onclick="vaciarCarrito()">Vaciar Carrito</button>
+        <button onclick="mostrarCheckout()">Checkout</button>
+    </div>
+
+    <!-- Modal de Checkout -->
+    <div id="checkout-modal">
+        <div class="checkout-content">
+            <h2>Finalizar Compra</h2>
+            <p>Subtotal: $<span id="modal-subtotal">0</span></p>
+            <p>Descuento: $<span id="modal-descuento">0</span></p>
+            <p>IVA: $<span id="modal-iva">0</span></p>
+            <p><strong>Total a Pagar: $<span id="modal-total">0</span></strong></p>
+            <button onclick="realizarCompra()">Confirmar Compra</button>
+            <button onclick="cerrarCheckout()">Cancelar</button>
+        </div>
+    </div>
     
+    <script src="../js/app.js"></script>
 </body>
 </html>
