@@ -86,7 +86,9 @@ body {
 /* Termina el nav */
 
 /* Contenedores=> */
-
+#lista-carrito ul {
+  text-decoration: none;
+}
 .tarjeta a {
   color: rgb(36, 5, 5);
   text-decoration: none;
